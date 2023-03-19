@@ -1,7 +1,14 @@
 {
-  "name": "modal-library",
+  "name": "@christophe-simon/modal-library",
+  "description": "enhance modal creation",
   "version": "0.1.0",
-  "private": true,
+  "main":"dist/index.js",
+"files":["dist", "README.md"], 
+"module":"dist/index.js",
+"repository": {
+    "type": "git",
+    "url": "https://github.com/christophe-simon/modal-library"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,26 +20,17 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",  
+    "clean": "rm -rf dist coverage",
+    "clean:fix": "rm -rf node_modules coverage build dist docs package-lock.json"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
