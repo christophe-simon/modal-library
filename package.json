@@ -28,6 +28,10 @@
     "clean:fix": "rm -rf node_modules coverage build dist docs package-lock.json"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-preset-react-app": "^10.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
