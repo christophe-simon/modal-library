@@ -22,6 +22,10 @@ function Modal(_ref) {
     _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
     display = _useState2[0],
     setDisplay = _useState2[1];
+  var _useState3 = (0, _react.useState)(false),
+    _useState4 = (0, _slicedToArray2["default"])(_useState3, 2),
+    show = _useState4[0],
+    setShow = _useState4[1];
   var modalRef = (0, _react.useRef)(null);
   var closeModal = function closeModal(event) {
     if (event) {
@@ -45,9 +49,19 @@ function Modal(_ref) {
       document.removeEventListener("keydown", handleDocumentKeydown);
     };
   }, [isOpen]);
+  (0, _react.useEffect)(function () {
+    if (display) {
+      var timer = setTimeout(function () {
+        setShow(true);
+      }, fadeDelay * fadeDuration);
+      return function () {
+        clearTimeout(timer);
+      };
+    } else {
+      setShow(false);
+    }
+  }, [display, fadeDuration, fadeDelay]);
   var modalContentStyle = {
-    display: display ? "inline-block" : "none",
-    opacity: display ? 1 : 0,
     transition: "opacity ".concat(fadeDuration, "ms ").concat(fadeDelay * fadeDuration, "ms")
   };
   return /*#__PURE__*/_react["default"].createElement("div", {
@@ -55,7 +69,7 @@ function Modal(_ref) {
     onClick: closeModal,
     onKeyDown: handleDocumentKeydown
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "modal-content",
+    className: "modal-content ".concat(show ? "show" : ""),
     ref: modalRef,
     style: modalContentStyle,
     onClick: function onClick(e) {
@@ -75,8 +89,8 @@ Modal.defaultProps = {
   closeText: "x",
   closeClass: "",
   showClose: true,
-  fadeDuration: 1000,
-  fadeDelay: 2.0
+  fadeDuration: 200,
+  fadeDelay: 0.5
 };
 var _default = Modal;
 exports["default"] = _default;

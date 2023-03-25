@@ -102,8 +102,8 @@ Modal.defaultProps = {
   closeText: "x",
   closeClass: "",
   showClose: true,
-  fadeDuration: 1000,
-  fadeDelay: 2.0,
+  fadeDuration: 200,
+  fadeDelay: 0.5,
 };
 
 export default Modal;
