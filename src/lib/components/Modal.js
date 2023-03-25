@@ -13,6 +13,7 @@ function Modal({
   fadeDelay,
 }) {
   const [display, setDisplay] = useState(false);
+  const [show, setShow] = useState(false);
   const modalRef = useRef(null);
 
   const closeModal = (event) => {
@@ -40,9 +41,20 @@ function Modal({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (display) {
+      const timer = setTimeout(() => {
+        setShow(true);
+      }, fadeDelay * fadeDuration);
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      setShow(false);
+    }
+  }, [display, fadeDuration, fadeDelay]);
+
   const modalContentStyle = {
-    display: display ? "inline-block" : "none",
-    opacity: display ? 1 : 0,
     transition: `opacity ${fadeDuration}ms ${fadeDelay * fadeDuration}ms`,
   };
 
@@ -53,7 +65,7 @@ function Modal({
       onKeyDown={handleDocumentKeydown}
     >
       <div
-        className="modal-content"
+        className={`modal-content ${show ? "show" : ""}`}
         ref={modalRef}
         style={modalContentStyle}
         onClick={(e) => e.stopPropagation()}
