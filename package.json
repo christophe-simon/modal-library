@@ -1,7 +1,12 @@
 {
-  "name": "@christophe-simon/modal-library",
-  "description": "enhance modal creation",
-  "version": "0.1.6",
+  "name": "modals-for-react",
+  "description": "make easier modal creation in react projects",
+  "keywords": [
+    "react",
+    "modal creation"
+  ],
+  "version": "0.1.7",
+  "author": "Christophe Simon",
   "main": "dist/index.js",
   "files": [
     "dist",
@@ -10,7 +15,7 @@
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/christophe-simon/modal-library"
+    "url": "https://github.com/christophe-simon/modals-for-react"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

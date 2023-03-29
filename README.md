@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+<!-- PROJECT SHIELDS -->
+<!--
+*** This template uses markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 
-## Available Scripts
+<!-- ABOUT THE PROJECT -->
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+[![Modals for React screenshot][product-screenshot]]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This library was realized during my training as a javascript/react developer.
+It enables to create modal windows in React applications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built With
 
-### `npm test`
+- Markdown, Html, Css, Javascript
+- React
+- Git, Github
+- VS Code
+- Love :)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- GETTING STARTED -->
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use this library follow these simple steps.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Git
+- Npm
+- A react project
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Install the library in your React project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install modals-for-react
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Import the library in the page you want to create a modal
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```js
+import { Modal } from "modals-for-react";
+```
 
-## Learn More
+3. Insert a Modal component where you want in your React page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```js
+function MyComponent() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
-### Code Splitting
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  return (
+    <>
+      <button onClick={openModal}>Open Modal</button>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onRequestClose={closeModal} showClose>
+          <p>Content you want to display in the modal</p>
+        </Modal>
+      )}
+    </>
+  );
+}
+```
 
-### Analyzing the Bundle Size
+<!-- USAGE EXAMPLES -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+Here are the properties of the Modal component. You can change them to modify the behaviour of the modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- isOpen (required): A boolean to indicate whether the modal is open or closed.
+- onRequestClose (required): A function to execute when the user requests to close the modal.
+- closeText: The text for the close button (default: "x").
+- closeClass: A custom CSS class for the close button (default: none).
+- showClose: A boolean to indicate whether the close button should be displayed (default: true).
+- fadeDuration: The duration of the opacity animation in milliseconds (default: 200).
+- fadeDelay: The delay before the opacity animation starts, as a proportion of fadeDuration (default: 0.5, which means 50%. 2.0 would mean 200%).
 
-### Advanced Configuration
+<!-- CONTACT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+Christophe Simon: [personnal website](https://www.csimon.info)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Project Link: [https://github.com/christophe-simon/modals-for-react](https://github.com/christophe-simon/modals-for-react)
 
-### `npm run build` fails to minify
+<!-- ACKNOWLEDGEMENTS -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+
+- This readme version is a simplified version of this [github repository](https://github.com/othneildrew/Best-README-Template) by Othneildrew
+- This readme version is a customized version of this [github repository](https://github.com/NicolasBrondin/basic-readme-template) by NicolasBrondin
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/christophe-simon/modals-for-react.svg?style=flat-square
+[contributors-url]: https://github.com/christophe-simon/modals-for-react/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/christophe-simon/modals-for-react.svg?style=flat-square
+[forks-url]: https://github.com/christophe-simon/modals-for-react/network/members
+[stars-shield]: https://img.shields.io/github/stars/christophe-simon/modals-for-react.svg?style=flat-square
+[stars-url]: https://github.com/christophe-simon/modals-for-react/stargazers
+[issues-shield]: https://img.shields.io/github/issues/christophe-simon/modals-for-react.svg?style=flat-square
+[issues-url]: https://github.com/christophe-simon/modals-for-react/issues
+[product-screenshot]: docs/screenshot.jpg
