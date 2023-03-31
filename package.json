@@ -5,7 +5,7 @@
     "react",
     "modal creation"
   ],
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Christophe Simon",
   "main": "dist/index.js",
   "files": [
