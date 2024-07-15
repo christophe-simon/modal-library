@@ -7,6 +7,8 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+# Modals for React: Library enabling to easily create modal screen components in React
+
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 
 <!-- ABOUT THE PROJECT -->
@@ -20,11 +22,10 @@ It enables to create modal windows in React applications.
 
 ### Built With
 
-- Markdown, Html, Css, Javascript
+- HTML, CSS, Javascript
 - React
-- Git, Github
+- Git
 - VS Code
-- Love :)
 
 <!-- GETTING STARTED -->
 
@@ -99,24 +100,23 @@ Here are the properties of the Modal component. You can change them to modify th
 
 Christophe Simon: [personnal website](https://www.csimon.info)
 
-Project Link: [https://github.com/christophe-simon/modals-for-react](https://github.com/christophe-simon/modals-for-react)
+Project Link: [https://github.com/csimon-web/modals-for-react](https://github.com/csimon-web/modals-for-react)
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 
-- This readme version is a simplified version of this [github repository](https://github.com/othneildrew/Best-README-Template) by Othneildrew
 - This readme version is a customized version of this [github repository](https://github.com/NicolasBrondin/basic-readme-template) by NicolasBrondin
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/christophe-simon/modals-for-react.svg?style=flat-square
-[contributors-url]: https://github.com/christophe-simon/modals-for-react/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/christophe-simon/modals-for-react.svg?style=flat-square
-[forks-url]: https://github.com/christophe-simon/modals-for-react/network/members
-[stars-shield]: https://img.shields.io/github/stars/christophe-simon/modals-for-react.svg?style=flat-square
-[stars-url]: https://github.com/christophe-simon/modals-for-react/stargazers
-[issues-shield]: https://img.shields.io/github/issues/christophe-simon/modals-for-react.svg?style=flat-square
-[issues-url]: https://github.com/christophe-simon/modals-for-react/issues
+[contributors-shield]: https://img.shields.io/github/contributors/csimon-web/modals-for-react.svg?style=flat-square
+[contributors-url]: https://github.com/csimon-web/modals-for-react/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/csimon-web/modals-for-react.svg?style=flat-square
+[forks-url]: https://github.com/csimon-web/modals-for-react/network/members
+[stars-shield]: https://img.shields.io/github/stars/csimon-web/modals-for-react.svg?style=flat-square
+[stars-url]: https://github.com/csimon-web/modals-for-react/stargazers
+[issues-shield]: https://img.shields.io/github/issues/csimon-web/modals-for-react.svg?style=flat-square
+[issues-url]: https://github.com/csimon-web/modals-for-react/issues
 [product-screenshot]: docs/screenshot.jpg
