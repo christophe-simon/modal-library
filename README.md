@@ -15,7 +15,7 @@
 
 ## About The Project
 
-[![Modals for React screenshot][product-screenshot]]
+[![Modals for React screenshot][product-screenshot]](#)
 
 This library was realized during my training as a javascript/react developer.
 It enables to create modal windows in React applications.
